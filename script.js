@@ -15,6 +15,7 @@ function barajear() {
 
 function iniciar(){
 	var i = 0;
+	var c = 1;
 	var showcards;
 	while (i < cards) {
 		(function(i) {
@@ -22,16 +23,18 @@ function iniciar(){
 	        	let singleCard = arr[i];
 	        	
 	        	if(i===0){
-	        		showcards = '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100"><span class="badge">'+i+'</span>' ;
+	        		showcards = '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100"><span class="badge badge-pill badge-warning count-notif">'+c+'</span>' ;
 	        	}
 	        	else{
-	        		showcards =  showcards+' '+ '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100"><span class="badge">'+i+'</span>' ;
+	        		showcards =  showcards+' '+ '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100"><span class="badge badge-pill badge-warning count-notif">'+c+'</span>' ;
 	        	}
 
 				let showCard = `${singleCard}`;
 				document.getElementById("showing").innerHTML = '<img src="cartas/'+showCard+'.PNG" width="180" height="240">';
 
 				document.getElementById("cards").innerHTML = showcards;
+
+				c++;
 	    	}, 500 * i)
 	    })(i++)
 	}
