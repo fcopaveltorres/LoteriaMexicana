@@ -22,14 +22,14 @@ function iniciar(){
 	        	let singleCard = arr[i];
 	        	
 	        	if(i===0){
-	        		showcards = arr[i] ;
+	        		showcards = '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100">' ;
 	        	}
 	        	else{
-	        		showcards =  showcards+' '+arr[i] ;
+	        		showcards =  showcards+' '+ '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100">' ;
 	        	}
 
 				let showCard = `${singleCard}`;
-				document.getElementById("showing").innerHTML = '<img src="cartas/'+showCard+'.PNG" width="160" height="200">';
+				document.getElementById("showing").innerHTML = '<img src="cartas/'+showCard+'.PNG" width="180" height="240">';
 
 				document.getElementById("cards").innerHTML = showcards;
 	    	}, 500 * i)
