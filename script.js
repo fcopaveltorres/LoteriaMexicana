@@ -22,10 +22,10 @@ function iniciar(){
 	        	let singleCard = arr[i];
 	        	
 	        	if(i===0){
-	        		showcards = '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100">' ;
+	        		showcards = '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100"><span class="badge">'+i+'</span>' ;
 	        	}
 	        	else{
-	        		showcards =  showcards+' '+ '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100">' ;
+	        		showcards =  showcards+' '+ '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100"><span class="badge">'+i+'</span>' ;
 	        	}
 
 				let showCard = `${singleCard}`;
