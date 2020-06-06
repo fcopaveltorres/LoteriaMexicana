@@ -5,6 +5,7 @@ application.controller("myCtrl", function ($scope, $http, $window, $timeout, $do
 	//variables
 	$scope.start=true;
 	$scope.isPaused=false;
+	$scope.AddListCards=[];
 	let arr = [];
 	var cards= 53;
 
@@ -26,26 +27,36 @@ application.controller("myCtrl", function ($scope, $http, $window, $timeout, $do
 	$scope.iniciar = function (){
 		AnunciarCarta(0);
 		$scope.start=false;
+		$scope.AddListCards=[];
 		barajear();
 		var i = 0;
 		var c = 1;
 		var showcards;
 		setTimeout(function() {
-			while (i < cards && !$scope.isPaused) {
+			while (i < cards) {
+				var src="cartas/"+arr[i]+".PNG";
+				$scope.AddListCards.push({ Imagen: src, num: c});
+				console.log($scope.AddListCards);
 				(function(i) {
 			    	setTimeout(function() {
 			        	let singleCard = arr[i];
 			        	
-			        	if(i===0){
-			        		showcards = '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100"><span class="badge badge-pill badge-warning count-notif">'+c+'</span>' ;
-			        	}
-			        	else{
-			        		showcards =  showcards+' '+ '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100"><span class="badge badge-pill badge-warning count-notif">'+c+'</span>' ;
-			        	}
-						let showCard = `${singleCard}`;
-						document.getElementById("showing").innerHTML = '<img src="cartas/'+showCard+'.PNG" width="180" height="240">';
-						document.getElementById("cards").innerHTML = showcards;
-						AnunciarCarta(showCard);
+
+
+			        	
+			        	//if(i===0){
+			        	//	showcards = '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100"><span class="badge badge-pill badge-warning count-notif">'+c+'</span>' ;
+			        	//}
+			        	//else{
+			        	//	showcards =  showcards+' '+ '<img src="cartas/'+arr[i]+'.PNG" width="60" height="100"><span class="badge badge-pill badge-warning count-notif">'+c+'</span>' ;
+			        	//}
+			        	//$scope.AddListCards.push({ Imagen: src, num: c});
+			        	
+
+						//let showCard = `${singleCard}`;
+						//document.getElementById("showing").innerHTML = '<img src="cartas/'+showCard+'.PNG" width="180" height="240">';
+						//document.getElementById("cards").innerHTML = showcards;
+						AnunciarCarta(arr[i]);
 						c++;
 			    	}, 800 * i)
 			    })(i++)
