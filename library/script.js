@@ -3,6 +3,9 @@ var application = angular.module("myApp", []);
 // Start controller
 application.controller("myCtrl", function ($scope, $http, $window, $timeout, $document) {
 	//variables
+	$scope.tiempopasar=1000;
+	$scope.tiempopasar_min=800;
+	$scope.tiempopasar_max=4000;
 	$scope.start=true;
 	$scope.isPaused=false;
 	$scope.AddListCards=[];
@@ -38,17 +41,18 @@ application.controller("myCtrl", function ($scope, $http, $window, $timeout, $do
 				
 				(function(i) {
 			    	setTimeout(function() {
-			        	let singleCard = arr[i];
+			    		AnunciarCarta(arr[i]);
 			        	var src="cartas/"+arr[i]+".PNG";
 						$scope.AddListCards.push({ Imagen: src, num: c});
 						$scope.Card=$scope.AddListCards[i].Imagen;
-						$scope.$apply();
-						AnunciarCarta(arr[i]);
+						$scope.$apply();						
 						c++;
-			    	}, 800 * i)
+			    	}, $scope.tiempopasar * i)
+
 			    })(i++)
 			}
-		},1200)
+
+		},1300)
 	}
 
 	$scope.pause=function(){		
@@ -68,6 +72,10 @@ application.controller("myCtrl", function ($scope, $http, $window, $timeout, $do
 	    		return arr.indexOf(item) === index
 	  		});
 		} while (arr.length < cards);
+	}
+
+	$scope.changepasar = function (tiempo){
+		$scope.tiempopasar=tiempo;
 	}
 
 
