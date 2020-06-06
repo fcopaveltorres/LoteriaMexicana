@@ -11,3 +11,8 @@
 }
 
 audio { display:none;}
+
+li{
+   display:block;
+   float:left;   
+}
