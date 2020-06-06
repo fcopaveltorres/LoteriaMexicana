@@ -12,7 +12,30 @@
     
     <title>Loteria</title>
 </head>
-<body  ng-controller="myCtrl">
+<body ng-controller="myCtrl">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Loteria</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active" ><a href="index.html">Jugar</a></li>
+            <li><a href="audio.html">Audio</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 text-center pt-2" style="margin-top: 10px;" ng-show="start">
             <button id="btnIniciar" class="btn btn-success" ng-click="iniciar()" onclick=""><span class="glyphicon glyphicon-play"></span> Iniciar</button>
@@ -44,7 +67,7 @@
         </div>
         
         <div class="col-lg-12 text-center">
-            <img id="js_ImgSku" width="180" height="240" src="{{Card}}" title="" />            
+            <img id="js_ImgSku" width="300" height="500" src="{{Card}}" title="" />            
         </div>
         <div class="col-lg-12" style="margin-top: 20px;">
             <ul >

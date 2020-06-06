@@ -3,7 +3,7 @@ var application = angular.module("myApp", []);
 // Start controller
 application.controller("myCtrl", function ($scope, $http, $window, $timeout, $document) {
 	//variables
-	$scope.tiempopasar=1000;
+	$scope.tiempopasar=1300;
 	$scope.tiempopasar_min=800;
 	$scope.tiempopasar_max=4000;
 	$scope.start=true;
