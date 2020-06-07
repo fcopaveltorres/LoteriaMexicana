@@ -16,3 +16,7 @@ li{
    display:block;
    float:left;   
 }
+
+img {
+  border-radius: 8px;
+}
