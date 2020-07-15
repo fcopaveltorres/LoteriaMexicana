@@ -11,18 +11,18 @@ application.controller("myCtrl", function ($scope, $http, $window, $timeout, $do
 	$scope.AddListCards=[];
 	$scope.Card="cartas/"+0+".PNG";
 	let arr = [];
-	var cards= 53;
+	var cards= 54;
 
 	$scope.voces = [{
 	  id: 0,
-	  label: 'pavel'
+	  label: 'marcos'
 	}, {
 	  id: 1,
 	  label: 'maribel'
 	},
 	{
 	  id: 2,
-	  label: 'ramiro'
+	  label: 'pavel'
 	}
 	];
 
