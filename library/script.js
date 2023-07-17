@@ -15,7 +15,7 @@ application.controller("myCtrl", function ($scope, $http, $window, $timeout, $do
 
 	$scope.voces = [{
 	  id: 0,
-	  label: 'maco'
+	  label: 'marco'
 	},
 	{
 	  id: 1,
