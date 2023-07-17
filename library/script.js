@@ -15,13 +15,10 @@ application.controller("myCtrl", function ($scope, $http, $window, $timeout, $do
 
 	$scope.voces = [{
 	  id: 0,
-	  label: 'marcos'
-	}, {
-	  id: 1,
-	  label: 'maribel'
+	  label: 'maco'
 	},
 	{
-	  id: 2,
+	  id: 1,
 	  label: 'pavel'
 	}
 	];
@@ -37,7 +34,7 @@ application.controller("myCtrl", function ($scope, $http, $window, $timeout, $do
 		var c = 1;
 		var showcards;
 		setTimeout(function() {
-			while (i < cards) {
+			while (i <= cards) {
 				
 				(function(i) {
 			    	setTimeout(function() {
